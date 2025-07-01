@@ -11,7 +11,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(images/back.jpg);
+  /* Nếu có ảnh thì dùng dòng dưới */
+  /* background-image: url(images/pastel-bg.jpg); */
+  /* Nếu không có ảnh thì dùng gradient */
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%, #a1c4fd 100%);
   background-position: center;
   background-size: cover;
 }
@@ -30,6 +33,9 @@
   position: relative;
   height: 150px;
   width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .image .profile-pic{
   width: 100%;
@@ -37,6 +43,16 @@
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  background: #eee;
+}
+.image span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-size: 18px;
+  display: none; /* Chỉ hiện khi ảnh lỗi */
 }
 .data{
   display: flex;
